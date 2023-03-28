@@ -62,4 +62,31 @@ git branch nueva-rama
 git checkout -b nueva-rama (crearla y moverse a ella)
 git branch -d rama (eliminarla)
 ```
+## git grep
 
+Busca en los archivos del repositorio cualquier ocurrencia de un patrón de búsqueda determinado. Puede usar este comando para buscar archivos específicos o para buscar en todo el repositorio.
+
+1. Búsqueda de un patrón de búsqueda en un archivo específico:
+```
+git grep "patrón de búsqueda" archivo.txt
+```
+Este comando buscará el patrón de búsqueda en el archivo archivo.txt. Si hay una coincidencia, Git mostrará la línea que contiene la coincidencia.
+
+2. Búsqueda de un patrón de búsqueda en todo el repositorio:
+```
+git grep "patrón de búsqueda"
+```
+Este comando buscará el patrón de búsqueda en todos los archivos del repositorio. Si hay una coincidencia, Git mostrará la línea que contiene la coincidencia, así como el nombre del archivo y la ubicación de la línea en el archivo.
+
+3. Búsqueda de un patrón de búsqueda en un tipo de archivo específico:
+```
+git grep "patrón de búsqueda" -- '*.txt'
+```
+Este comando buscará el patrón de búsqueda solo en archivos con la extensión .txt. Puedes cambiar .txt a cualquier otra extensión de archivo que desees buscar.
+
+4. Búsqueda de un patrón de búsqueda en el historial de Git:
+```
+git grep "patrón de búsqueda" $(git rev-list --all)
+```
+
+Este comando buscará el patrón de búsqueda en todo el historial de Git, incluidas las confirmaciones antiguas y las ramas eliminadas. Si hay una coincidencia, Git mostrará la línea que contiene la coincidencia, así como el nombre del archivo y la ubicación de la línea en el archivo.

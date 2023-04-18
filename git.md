@@ -90,3 +90,26 @@ git grep "patrón de búsqueda" $(git rev-list --all)
 ```
 
 Este comando buscará el patrón de búsqueda en todo el historial de Git, incluidas las confirmaciones antiguas y las ramas eliminadas. Si hay una coincidencia, Git mostrará la línea que contiene la coincidencia, así como el nombre del archivo y la ubicación de la línea en el archivo.
+
+## git show
+
+Permite ver información detallada sobre una confirmación específica en tu repositorio Git. Puedes usarlo para ver los cambios realizados en esa confirmación, así como otra información relevante asociada a esa confirmación, como el autor, fecha, y mensaje de confirmación.
+
+1. Ver los cambios realizados en la confirmación más reciente:
+```
+git show
+```
+2. Ver los cambios realizados en una confirmación específica:
+```
+git show <commit>
+```
+3. Ver los cambios realizados en una confirmación específica en un formato compacto:
+```
+git show --stat <commit>
+```
+Este comando mostrará una vista compacta de los cambios realizados en la confirmación <commit>, incluyendo el nombre de archivo, el número de líneas agregadas y eliminadas, y un resumen del cambio.
+  
+4. Ver la información detallada de una confirmación, incluyendo el autor, fecha, y mensaje de confirmación:
+```
+git show --stat --summary <commit>
+```
